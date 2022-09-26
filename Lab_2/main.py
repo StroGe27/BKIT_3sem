@@ -24,8 +24,13 @@ def get_color(termpt):
     return str(input())
 def main():
     print("Выберете тип ввода:\n1 - с клавиатуры в консоли\n2 - вариант 16")
-    choise = int(input())
-    cowsay.cow('Hello World')
+    while True:
+        choise = int(input())
+        if choise == 1 or choise == 2:
+            break
+        else:
+            print("Введено неверное значение. Введите 1 или 2")
+    
     if choise == 1:
         r  = Rectangle(get_color("прямоугольника"), get_side_rad(), get_side_rad())
         c = Circle(get_color("круга"), get_side_rad("Введите радиус"))

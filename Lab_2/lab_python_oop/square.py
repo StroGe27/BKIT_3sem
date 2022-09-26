@@ -12,9 +12,4 @@ class Square(Rectangle):
         super().__init__(color_param, self.side, self.side)
 
     def __repr__(self):
-        return '{} {} цвета со стороной {} площадью {}.'.format(
-            Square.type,
-            self.fc.colorproperty,
-            self.side,
-            self.square()
-        )
+        return '{} {} цвета со стороной {} площадью {}.'.format( Square.type, self.fc.colorproperty, self.side, self.square())

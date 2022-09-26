@@ -1,10 +1,7 @@
 from abc import ABC, abstractmethod
 
-
+#Абстрактный класс «Геометрическая фигура»
 class Figure(ABC):
-    """
-    Абстрактный класс «Геометрическая фигура»
-    """
     @abstractmethod
     def square(self):
         pass

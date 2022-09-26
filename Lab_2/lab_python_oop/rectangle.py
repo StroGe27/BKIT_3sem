@@ -18,10 +18,4 @@ class Rectangle(Figure):
         return self.width*self.height
 
     def __repr__(self):
-        return '{} {} цвета шириной {} и высотой {} площадью {}.'.format(
-            Rectangle.type,
-            self.fc.colorproperty,
-            self.width,
-            self.height,
-            self.square()
-        )
+        return '{} {} цвета шириной {} и высотой {} площадью {}.'.format(Rectangle.type, self.fc.colorproperty, self.width, self.height, self.square())
