@@ -10,7 +10,7 @@ def main():
     {'title': 'Kover', 'price': 2000, 'color': 'green'},
     {'title': 'Divan dlia otdiha', 'color': 'black'}
     ]
-    #field(goods, 'title')
+    field(goods, 'title')
     #field(goods, 'title', 'price')
     #gen_random(5, 1, 3)
     data = [4, -30, 100, -100, 123, 1, 0, -1, -4]
@@ -18,15 +18,14 @@ def main():
     #print(Unique(data))
     #sort_array(data)
     #print_result_tests()
-    with cm_timer_1():
-        time.sleep(5.5)
-    with cm_timer_2():
-        time.sleep(5.5)
+    #with cm_timer_1():
+    #    time.sleep(5.5)
+    #with cm_timer_2():
+    #    time.sleep(5.5)
 
 
 if __name__ == "__main__":
     main()
 #не сделано:
-#3
-#6
-#7
+#3 - доделать (unique)
+#7 - не приступал
