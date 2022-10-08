@@ -13,7 +13,7 @@ path = None
 
 # Необходимо в переменную path сохранить путь к файлу, который был передан при запуске сценария
 
-with open(path) as f:
+with open("D:\pp\BKIT_3sem\BKIT_3sem\Lab_3\lab_python_fp\data_light.json") as f:
     data = json.load(f)
 
 # Далее необходимо реализовать все функции по заданию, заменив `raise NotImplemented`

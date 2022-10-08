@@ -4,7 +4,7 @@ def field(items, *args):
         for i in items:
             temp_key = i.get(args[0], "None")
             if temp_key != "None":
-                print(temp)
+                print(temp_key)
     else:
         k = []
         for i in items:

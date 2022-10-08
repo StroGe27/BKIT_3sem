@@ -1,23 +1,21 @@
-from xml.etree.ElementTree import tostring
-
-
 class Unique(object):
     def __init__(self, items, **kwargs):
-        pass
-    def __init__(self, args, ignore_case = False):
-        self.args_obj = set(args)
-        # Нужно реализовать конструктор
-        # В качестве ключевого аргумента, конструктор должен принимать bool-параметр ignore_case,
-        # в зависимости от значения которого будут считаться одинаковыми строки в разном регистре
-        # Например: ignore_case = True, Aбв и АБВ - разные строки
-        #           ignore_case = False, Aбв и АБВ - одинаковые строки, одна из которых удалится
-        # По-умолчанию ignore_case = False
-    def __str__(self):
-        temp = tostring(self.args_obj)
-        return temp
+        self.__r = []
+        for key, value in kwargs.items():
+            if key == "ignore_case" and value == True:
+                try:
+                    items = [i.lower() for i in items]
+                finally:
+                    break
+        print(*sorted(set(items)), sep = ", ")
+
     def __next__(self):
-        # Нужно реализовать __next__    
-        pass
+        try:
+            temp = self.__r[self.begin]
+            self.begin += 1
+            return temp
+        except:
+            raise StopIteration
 
     def __iter__(self):
         return self
