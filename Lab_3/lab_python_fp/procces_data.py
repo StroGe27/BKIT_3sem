@@ -1,45 +1,30 @@
+# -*- coding: cp1251 -*-
 import json
-import sys
-#from lab_python_fp.field import field
-#from lab_python_fp.gen_random import gen_random
-#from lab_python_fp.unique import Unique
-#from sort import sort_array
+from xml.etree.ElementTree import tostring
+from field import field
+from gen_random import gen_random
+from unique import Unique
+from sort import sort_array
 from print_result import print_result
 from cm_timer import cm_timer_1, cm_timer_2
-import time
-# Сделаем другие необходимые импорты
 
-path = None
+from operator import concat
 
-# Необходимо в переменную path сохранить путь к файлу, который был передан при запуске сценария
+def f1(data):
+    return Unique(field(data, 'job-name'), ignore_case = True).unique()
 
-with open("D:\pp\BKIT_3sem\BKIT_3sem\Lab_3\lab_python_fp\data_light.json") as f:
-    data = json.load(f)
+def f2(temp):
+    return filter(lambda a: a.startswith('программист'), temp)
 
-# Далее необходимо реализовать все функции по заданию, заменив `raise NotImplemented`
-# Предполагается, что функции f1, f2, f3 будут реализованы в одну строку
-# В реализации функции f4 может быть до 3 строк
+def f3(temp):
+    return list(map(lambda x: concat(x, ' c опытом Python'), temp))
 
-@print_result
-def f1(arg):
-    pass
+def f4(temp):
+    return zip(temp, gen_random(len(temp), 100000, 200000))
 
-
-@print_result
-def f2(arg):
-    pass
-
-
-@print_result
-def f3(arg):
-    pass
-
-
-@print_result
-def f4(arg):
-    pass
-
-
-if __name__ == '__main__':
+if __name__ == '__main__':    
+    with open('lab_python_fp\data_light.json', encoding = "UTF-8-sig") as f:
+        data = json.load(f)
     with cm_timer_1():
-        f4(f3(f2(f1(data))))
+        for i in f4(f3(f2(f1(data)))):  
+            print(i)

@@ -1,10 +1,12 @@
 def field(items, *args):
     assert len(args) > 0
     if len(args) == 1:
+        temp = []
         for i in items:
             temp_key = i.get(args[0], "None")
             if temp_key != "None":
-                print(temp_key)
+                temp.append(temp_key)
+        return temp
     else:
         k = []
         for i in items:

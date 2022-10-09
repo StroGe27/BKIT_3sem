@@ -4,11 +4,13 @@ class Unique(object):
         for key, value in kwargs.items():
             if key == "ignore_case" and value == True:
                 try:
-                    items = [i.lower() for i in items]
+                    self.__r = sorted(set([i.lower() for i in items]))
                 finally:
                     break
-        print(*sorted(set(items)), sep = ", ")
-
+            
+                 
+    def unique(self):
+        return self.__r
     def __next__(self):
         try:
             temp = self.__r[self.begin]

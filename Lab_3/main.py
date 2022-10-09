@@ -1,3 +1,4 @@
+# -*- coding: cp1251 -*-
 from lab_python_fp.field import field
 from lab_python_fp.gen_random import gen_random
 from lab_python_fp.unique import Unique
@@ -11,14 +12,14 @@ def main():
     {'title': 'Divan dlia otdiha', 'color': 'black'}
     ]
     #field(goods, 'title')
-    #field(goods, 'title', 'price')
+    print(field(goods, 'title', 'price'))
     #gen_random(5, 1, 3)
     #data = [4, -30, 100, -100, 123, 1, 0, -1, -4]
     #data_1 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
     #data = gen_random(5, 1, 3)
 
     data = ['a', 'A', 'b', 'B', 'a', 'A', 'b', 'B']
-    Unique(data, ignore_case=True)
+    Unique(data, ignore_case = True).unique()
     #print(Unique(data))
     #sort_array(data)
     #print_result_tests()
@@ -30,6 +31,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-#не сделано:
-#3 - доделать (unique)
-#7 - не приступал
