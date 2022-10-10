@@ -18,6 +18,7 @@ class Unique(object):
             return temp
         except:
             raise StopIteration
-
+    def __str__(self):
+        return str(*self.__r)
     def __iter__(self):
         return self

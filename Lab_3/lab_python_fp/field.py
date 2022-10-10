@@ -16,4 +16,4 @@ def field(items, *args):
                 if temp_key != "None":
                     temp.update({j: temp_key})
             k.append(temp)
-        print(*k, sep = ", ")
+        return k

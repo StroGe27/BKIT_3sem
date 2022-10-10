@@ -11,20 +11,20 @@ def main():
     {'title': 'Kover', 'price': 2000, 'color': 'green'},
     {'title': 'Divan dlia otdiha', 'color': 'black'}
     ]
-    #field(goods, 'title')
-    print(field(goods, 'title', 'price'))
+    #print(*field(goods, 'title'))
+    #print(*field(goods, 'title', 'price'))
     #gen_random(5, 1, 3)
     #data = [4, -30, 100, -100, 123, 1, 0, -1, -4]
     #data_1 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
     #data = gen_random(5, 1, 3)
-
-    data = ['a', 'A', 'b', 'B', 'a', 'A', 'b', 'B']
-    Unique(data, ignore_case = True).unique()
+    #print_result_tests()
+    #data = ['a', 'A', 'b', 'B', 'a', 'A', 'b', 'B']
+    #print(Unique(data, ignore_case = True))
     #print(Unique(data))
     #sort_array(data)
     #print_result_tests()
-    #with cm_timer_1():
-    #    time.sleep(5.5)
+    with cm_timer_2():
+        time.sleep(1.5)
     #with cm_timer_2():
     #    time.sleep(5.5)
 

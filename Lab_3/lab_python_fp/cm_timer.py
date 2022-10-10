@@ -1,13 +1,13 @@
 from contextlib import contextmanager
-import time
+from time import time
 class cm_timer_1:
     def __enter__(self):
-        self.__time_begin = time.time()
+        self.__time_begin = time()
     def __exit__(self, type, value, traceback):
-        print(time.time() - self.__time_begin)
+        print(time() - self.__time_begin)
 
 @contextmanager
 def cm_timer_2():
-    time_begin = time.time()
+    time_begin = time()
     yield 
-    print(time.time() - time_begin)
+    print(time() - time_begin)
