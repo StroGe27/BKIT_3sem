@@ -87,7 +87,7 @@ def main():
     res_13 = {}
     # Перебираем всех поставщиков (будем проверять наличие слова: "Рога в названии")
     for d in Providers:
-        if 'ООО.' in d.name:
+        if 'OOO.' in d.name:
             d_detailz = list(filter(lambda i: i[2] == d.name, one_to_many))   
             if len(d_detailz) > 0:
                 # Только название деталей
