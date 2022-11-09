@@ -1,4 +1,3 @@
-#import pytest
 from Lab_1 import get_roots
 from pytest_bdd import scenarios, given, when, then, parsers
 

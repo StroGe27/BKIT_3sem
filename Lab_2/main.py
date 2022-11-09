@@ -2,6 +2,7 @@ from lab_python_oop.rectangle import Rectangle
 from lab_python_oop.circle import Circle
 from lab_python_oop.square import Square
 import sys
+
 def get_side_rad(prompt = "Введите значение стороны"):
     print(prompt)
     try:
@@ -40,6 +41,7 @@ def main():
         print(Rectangle("синего", 16, 16))
         print(Circle("зеленого", 16))
         print(Square("красного", 16))
+
 
 if __name__ == "__main__":
     main()

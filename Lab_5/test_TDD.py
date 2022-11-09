@@ -32,6 +32,7 @@ def tests_get_roots_three():
     assert temp == {-5, 0, 5}
     temp = get_roots(7, -112, 0)   
     assert temp == {-4, 0, 4}
+
 def tests_get_roots_four():
     temp = get_roots(7, -287, 2800)     
     assert temp == {-5, -4, 4, 5}
