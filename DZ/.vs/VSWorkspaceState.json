@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.ipynb_checkpoints"
   ],
   "SelectedNode": "\\Flask_web.py",
   "PreviewInSolutionExplorer": false
