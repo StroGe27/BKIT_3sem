@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+.pytest_cache
+.vs
+__pycache__
+venv
+Pipfile
+Pipfile.lock
